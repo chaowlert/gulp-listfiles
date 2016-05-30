@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     listfiles   = require('./index'),
-    nodeunit    = require('gulp-nodeunit');
+    nodeunit    = require('gulp-nodeunit'),
+    runSequence = require('run-sequence');
 
 var options = {
     filename: 'output.txt',
@@ -38,7 +39,14 @@ gulp.task('listfiles', function () {
         .pipe(gulp.dest('tmp/'));
 });
 
-gulp.task('test', function () {
+gulp.task('nodeunit', function () {
     gulp.src('test/*_test.js')
         .pipe(nodeunit());
+});
+
+gulp.task('test', function (cb) {
+    runSequence(
+        'listfiles',
+        'nodeunit',
+        cb);
 });
