@@ -1,0 +1,32 @@
+{
+  "name": "gulp-listfiles",
+  "version": "0.1.0",
+  "description": "Create a list of files and perform an action on each file in the list then write the results to a file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chaowlert/gulp-listfiles.git"
+  },
+  "keywords": [
+    "gulp",
+    "listfiles"
+  ],
+  "author": "Chaowlert Chaisrichalermpol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chaowlert/gulp-listfiles/issues"
+  },
+  "homepage": "https://github.com/chaowlert/gulp-listfiles#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-nodeunit": "0.0.5"
+  },
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "slash": "^1.0.0",
+    "through": "^2.3.8"
+  }
+}
